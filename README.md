@@ -16,8 +16,8 @@ https://app.filmora.io/#/object/csp1lcb5jr1u7ttpnq9g
 
 ### Convert VertexAI output into JSON object
 - JSON form is efficient to handle the data, but the type of the llm output is str, so it is required to be converted into JSON file. 
-- configure llm output type: `model = genai.GenerativeModel("gemini-1.5-pro-latest", generation_config={"response_mime_type": "application/json"})`
-- convert the output into json: `json.loads(response.text)`
+  - configure llm output type: `model = genai.GenerativeModel("gemini-1.5-pro-latest", generation_config={"response_mime_type": "application/json"})`
+  - convert the output into json: `json.loads(response.text)`
 
 ### Populate html file dynamically with data
 - Use library: `from jinja2 import Template`
