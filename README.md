@@ -1,51 +1,39 @@
 # Patent Application Generator
-This application is developed for patent lawyers who have to fill out US patent application forms(IDS).
-The app automatically generates application forms by extracting data from large amout of related documents.
-
-After the app complete the form, users can edit it interactively simply by clicking buttons of the HTML form.
-This app innovately enhances the effectiveness of patent lawyers by automation and validation of form. 
+This application streamlines the process for patent lawyers by automatically generating U.S. patent application forms (IDS) from related documents.<br>
+Users can interactively review and edit the forms through an intuitive HTML interface, significantly enhancing efficiency and accuracy.
 
 [👉 Go to Live APP](https://patent-application-generator-787703115620.us-west1.run.app)
 
 # User Flow
-1. User uploads documents related to the patent application contents(e.g. foreign application forms, patent descriptions)
-2. The app analyzes the uploaded documents and extracts data matched with US-patent application requirements.
-3. Parse and refine extracted data and fill out HTML form. 
-4. Users review the form and add, delete and edit each line of the filled data.
-5. User can save or print the application form to be ready to submit to the patent department.
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/f37a216c-4ffa-428e-8601-51196f1c2968" />
+<img width="600" alt="image" src="https://github.com/user-attachments/assets/47e53105-312a-4e00-a686-5f71dfee75bb" />
+
+
+1.  Upload documents related to the patent (e.g., foreign forms, descriptions).
+2.	Extract and analyze data to match U.S. patent application requirements.
+3.	Automatically populate an editable HTML form with the refined data.
+4.	Users review, edit, and finalize the form interactively.
+5.	Save or print the completed form for submission.
+
 
 # Key Features
-- **Speciality**: The app is focused on the handful problem with patent lawyers in US.
-- **Accuracy**: The accuracy of the completed form is 99%, which is validated by the patent lawyer in partnership.
-- **Compatibility**: The app can be applied to multiple languages(e.g. English, Chinese, Korean, etc.), and variety of types of pdf can be readable(image, text, etc.)
-- **Scalability**: Multiple documents can be uploaded and can be handled.
+- **Specialized**: Tailored for U.S. patent lawyers to address specific workflow challenges.
+- **High Accuracy**: Delivers 99% accuracy, validated by partner patent lawyers.
+- **Multilingual Support**: Processes documents in multiple languages (e.g., English, Chinese, Korean).
+- **Scalable**: Handles multiple document uploads and diverse PDF formats (image/text).
 
 # My Contributions 
-- _Designed_ the architecture, collaborating with the PM and patent lawyer to align with client business requirements.
+- _Designed_ the architecture, collaborating with a PM and patent lawyer to align with client business requirements.
 - _Developed_ backend logic using Python and created a user-friendly frontend UI with Streamlit.
 - _Deployed_ the app using CI/CD pipelines on GCP, ensuring reliability and scalability.
 
-# Technical Considerations
-### Streamlit and VertexAI Integration
-- Handling the integration between the Streamlit file uploader widget and the VertexAI API posed a challenge, as detailed below:
-  - The Streamlit file uploader stores the uploaded file as a 'file-like' object.
-  - To interact with the VertexAI API, this object must be converted into a data stream using `uploaded_file.getbuffer()` method.
-  - Then the byte file should be saved as a temporary file using `tempfile` library.
-  - The byte stream is then passed to the VertexAI API, where it is converted into an image format compatible with VertexAI using the `genai.upload_file(f.name, mime_type="application/pdf")` method.
-
-### Convert VertexAI output into JSON object
-- JSON form is efficient to handle the data, but the type of the llm output is str, so it is required to be converted into JSON file. 
-  - configure llm output type: `model = genai.GenerativeModel("gemini-1.5-pro-latest", generation_config={"response_mime_type": "application/json"})`
-  - convert the output into json: `json.loads(response.text)`
-
-### Populate html file dynamically with data
-- Use library: `from jinja2 import Template`
-- Save the data in dictionary form, then render the data into html: `output = template.render(data)`
-- Fetch the data in html file  
+# Technical Highlights
+1. Streamlit and VertexAI Integration: Managed file uploads as streams and converted data for compatibility with VertexAI.
+2. JSON Conversion: Configured LLM output to JSON for structured handling of generated data.
+3.	Dynamic HTML Rendering: Used Jinja2 templates to populate and dynamically render data in the HTML form.
 
 # License
-- This app is associated with jigo.ai
-- The license is owned by jigo.ai
+- Associated with Jigo.ai, which holds the app’s license.
 
 # Tech Stacks
 - Programming: Python, Streamlit
