@@ -1,10 +1,18 @@
-# Patent Autofill Engine
-# Demo Video
-https://app.filmora.io/#/object/csp1lcb5jr1u7ttpnq9g
+# Patent Application Generator
+This application is developed for patent lawyers who have to fill out US patent application forms(IDS).
+The app automatically generates application forms by extracting data from large amout of related documents.
+
+After the app complete the form, users can edit it interactively simply by clicking buttons of the HTML form.
+This app innovately enhances the effectiveness of patent lawyers by automation and validation of form. 
+
+[👉 Go to Live APP](https://patent-application-generator-787703115620.us-west1.run.app)
 
 # User Flow
-1. Upload a document contains content about patent application
-2. Gemini-Pro automatically extract the data which are required to fill out US-patent application
+1. User uploads documents related to the patent application contents(e.g. foreign application forms, patent descriptions)
+2. The app analyzes the uploaded documents and extracts data matched with US-patent application requirements.
+3. Parse and refine extracted data and fill out HTML form. 
+4. Users review the form and add, delete and edit each line of the filled data.
+5. User can save or print the application form to be ready to submit to the patent department.  
 
 # Technical Considerations
 ### Streamlit and VertexAI Integration
@@ -24,14 +32,10 @@ https://app.filmora.io/#/object/csp1lcb5jr1u7ttpnq9g
 - Save the data in dictionary form, then render the data into html: `output = template.render(data)`
 - Fetch the data in html file  
 
-### Gemini Flash vs. Pro:
-- After comparing the Gemini Flash and Pro versions in terms of performance and cost, we chose to proceed with the Pro version due to its optimized balance of both.
-
 # License
-- Source code is proprietary and cannot be shared, as it is a resource of Jigo Incorporation.
+- This app is associated with jigo.ai
+- The license is owned by jigo.ai
 
 # Tech Stacks
-- Streamlit
-- Python
-- VertexAI APIs
-- GCP SDK
+- Programming: Python, Streamlit
+- Gloud Platform: GCP
