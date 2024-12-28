@@ -1,6 +1,7 @@
 # Patent Application Generator
-This application streamlines the process for patent lawyers by automatically generating U.S. patent application forms (IDS) from related documents.<br>
-Users can interactively review and edit the forms through an intuitive HTML interface, significantly enhancing efficiency and accuracy.
+This application streamlines the process for _U.S. patent lawyers_ by automatically generating patent application forms (IDS).<br>
+Users can interactively review and edit the forms through an intuitive HTML interface,<br> 
+significantly enhancing their efficiency and accuracy.
 
 [👉 Go to Live APP](https://patent-application-generator-787703115620.us-west1.run.app)
 
