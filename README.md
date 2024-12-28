@@ -12,7 +12,18 @@ This app innovately enhances the effectiveness of patent lawyers by automation a
 2. The app analyzes the uploaded documents and extracts data matched with US-patent application requirements.
 3. Parse and refine extracted data and fill out HTML form. 
 4. Users review the form and add, delete and edit each line of the filled data.
-5. User can save or print the application form to be ready to submit to the patent department.  
+5. User can save or print the application form to be ready to submit to the patent department.
+
+# Key Features
+- **Speciality**: The app is focused on the handful problem with patent lawyers in US.
+- **Accuracy**: The accuracy of the completed form is 99%, which is validated by the patent lawyer in partnership.
+- **Compatibility**: The app can be applied to multiple languages(e.g. English, Chinese, Korean, etc.), and variety of types of pdf can be readable(image, text, etc.)
+- **Scalability**: Multiple documents can be uploaded and can be handled.
+
+# My Contributions 
+- _Designed_ the architecture, collaborating with the PM and patent lawyer to align with client business requirements.
+- _Developed_ backend logic using Python and created a user-friendly frontend UI with Streamlit.
+- _Deployed_ the app using CI/CD pipelines on GCP, ensuring reliability and scalability.
 
 # Technical Considerations
 ### Streamlit and VertexAI Integration
