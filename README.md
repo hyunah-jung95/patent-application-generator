@@ -39,3 +39,6 @@ significantly enhancing their efficiency and accuracy.
 # Tech Stacks
 - Programming: Python, Streamlit
 - Gloud Platform: GCP
+
+### [> Tour other projects...](https://github.com/hyunah-jung95#projects)
+
